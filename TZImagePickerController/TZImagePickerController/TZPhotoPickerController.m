@@ -66,7 +66,7 @@ static CGSize AssetGridThumbnailSize;
     layout.minimumLineSpacing = margin;
     CGFloat top = margin + 44;
     if (iOS7Later) top += 20;
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(margin, top, self.view.tz_width - 2 * margin, self.view.tz_height - 50 - top) collectionViewLayout:layout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(margin, 0, self.view.tz_width - 2 * margin, self.view.tz_height - 50 - top) collectionViewLayout:layout];
     _collectionView.backgroundColor = [UIColor whiteColor];
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
@@ -98,7 +98,7 @@ static CGSize AssetGridThumbnailSize;
 }
 
 - (void)configBottomToolBar {
-    UIView *bottomToolBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.tz_height - 50, self.view.tz_width, 50)];
+    UIView *bottomToolBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.tz_height - 50 - 60, self.view.tz_width, 50)];
     CGFloat rgb = 253 / 255.0;
     bottomToolBar.backgroundColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:1.0];
     
